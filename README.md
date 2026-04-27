@@ -197,7 +197,7 @@ In the AWS Console:
 ```bash
 curl -X POST <invoke-url>/submit \
   -H "Content-Type: application/json" \
-  -d '{"name": "Omao", "message": "Final capstone test"}'
+  -d '{"name": "Faith", "message": "Hello from curl"}'
 ```
 
 Expected response:
@@ -205,7 +205,7 @@ Expected response:
 ```json
 {
   "message": "Data successfully received and logged!",
-  "id": "h341w2v6"
+  "id": "fw8ybg9w"
 }
 ```
 
@@ -269,5 +269,3 @@ The deployment satisfies the four stated goals of the project:
 - **Containerized Application** — A Docker image built from `webapp/Dockerfile` is pushed to Amazon ECR and deployed to ECS Fargate, served behind an Application Load Balancer.
 - **Serverless API** — Amazon API Gateway exposes a `POST /submit` endpoint that integrates with an AWS Lambda function. The Lambda accepts JSON payloads, logs them to CloudWatch, and returns a success response with a generated submission ID.
 - **Observability** — A custom CloudWatch Dashboard (`capstone-observability`) visualizes Lambda invocations, errors, duration, and the most recent received payloads.
-#   c a p s t o n e - l a b - 1  
- 
